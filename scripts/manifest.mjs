@@ -29,7 +29,7 @@ export function readDistros(root = distrosRoot) {
 export function validateDistro({ directory, manifest }) {
   const errors = [];
   if (!PACKAGE_NAME.test(manifest.name ?? '')) errors.push('name must match @nanodsh/distro-<slug>');
-  if (manifest.name !== `@nanodsh/${directory}`) errors.push(`name must be @nanodsh/${directory}, the directory name`);
+  if (manifest.name !== `@nanodsh/distro-${directory}`) errors.push(`name must be @nanodsh/distro-${directory}, the directory name`);
   if (!VERSION.test(manifest.version ?? '')) errors.push('version must be an exact semver, for example 0.0.1');
   if (manifest.private === true) errors.push('the package must be publishable, so private must not be true');
   if (!isPlainObject(manifest.dsh?.distro)) {
@@ -48,6 +48,10 @@ export function validateDistro({ directory, manifest }) {
   } else {
     for (const [name, spec] of Object.entries(dependencies)) {
       if (typeof spec !== 'string' || !VERSION.test(spec)) errors.push(`dependency ${name} must be pinned to an exact version`);
+    }
+    const base = dependencies['@deepseek-ai/dsh-base'];
+    if (base !== undefined && manifest.version !== base) {
+      errors.push(`version must match the @deepseek-ai/dsh-base dependency (${base})`);
     }
   }
   if (manifest.publishConfig?.access !== 'public') errors.push('publishConfig.access must be public');

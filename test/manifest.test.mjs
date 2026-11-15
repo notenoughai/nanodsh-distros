@@ -8,7 +8,7 @@ import { validateAll, validateDistro } from '../scripts/manifest.mjs';
 function manifest(overrides = {}) {
   return {
     name: '@nanodsh/distro-standard',
-    version: '0.0.1',
+    version: '0.2.2-rc.1',
     dsh: { distro: { api: 1, defaultBundles: ['@deepseek-ai/dsh-base'], allowBuilds: ['node-pty'] } },
     dependencies: { '@deepseek-ai/dsh-base': '0.2.2-rc.1' },
     publishConfig: { access: 'public' },
@@ -17,7 +17,7 @@ function manifest(overrides = {}) {
 }
 
 function errors(overrides) {
-  return validateDistro({ directory: 'distro-standard', manifest: manifest(overrides) });
+  return validateDistro({ directory: 'standard', manifest: manifest(overrides) });
 }
 
 function repository(distros) {
@@ -67,8 +67,12 @@ test('rejects a package that would publish as restricted', () => {
 
 test('rejects packages that drift apart in version', () => {
   const root = repository({
-    'distro-standard': manifest(),
-    'distro-other': manifest({ name: '@nanodsh/distro-other', version: '0.0.2' })
+    standard: manifest(),
+    other: manifest({
+      name: '@nanodsh/distro-other',
+      version: '0.2.2-rc.2',
+      dependencies: { '@deepseek-ai/dsh-base': '0.2.2-rc.2' }
+    })
   });
   const { failures } = validateAll(root);
   assert.match(failures.flatMap((failure) => failure.errors).join('\n'), /share one version/);
@@ -77,4 +81,8 @@ test('rejects packages that drift apart in version', () => {
 test('rejects a repository with no packages', () => {
   const root = mkdtempSync(join(tmpdir(), 'distros-empty-'));
   assert.match(validateAll(root).failures.flatMap((failure) => failure.errors).join('\n'), /no distro packages/);
+});
+
+test('rejects a version that does not match the pinned dsh-base', () => {
+  assert.match(errors({ version: '0.0.1' }).join('\n'), /version must match the @deepseek-ai\/dsh-base dependency/);
 });

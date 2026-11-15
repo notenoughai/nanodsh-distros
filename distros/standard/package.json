@@ -1,0 +1,49 @@
+{
+  "name": "@nanodsh/distro-standard",
+  "version": "0.2.2-rc.3",
+  "description": "The standard host set for nanodsh instances",
+  "dsh": {
+    "distro": {
+      "api": 1,
+      "defaultBundles": [
+        "@deepseek-ai/dsh-base"
+      ],
+      "allowBuilds": [
+        "@deepseek-ai/dsh-subprocess-local",
+        "@google/genai",
+        "koffi",
+        "node-pty",
+        "protobufjs"
+      ]
+    }
+  },
+  "dependencies": {
+    "@deepseek-ai/cordis": "4.1.0",
+    "@deepseek-ai/dsh-base": "0.2.2-rc.3",
+    "@deepseek-ai/dsh-agent-preset": "0.2.2-rc.3",
+    "@deepseek-ai/dsh-agent-tool-presentation": "0.2.2-rc.3",
+    "@deepseek-ai/dsh-client-ui-agent-preset": "0.2.2-rc.3",
+    "@deepseek-ai/dsh-client-ui-cordis": "0.2.2-rc.3",
+    "@deepseek-ai/dsh-cordis-client-runner": "0.2.2-rc.3",
+    "@deepseek-ai/dsh-mcp-client": "0.2.2-rc.3",
+    "@deepseek-ai/dsh-persona": "0.2.2-rc.3",
+    "@deepseek-ai/dsh-schedule": "0.2.2-rc.3",
+    "@deepseek-ai/dsh-session-reference": "0.2.2-rc.3",
+    "@deepseek-ai/dsh-skill-office": "0.2.2-rc.3",
+    "@deepseek-ai/dsh-terminal": "0.2.2-rc.3",
+    "@deepseek-ai/dsh-terminal-bash": "0.2.2-rc.3",
+    "@deepseek-ai/dsh-time-context": "0.2.2-rc.3",
+    "@deepseek-ai/dsh-tmux-context": "0.2.2-rc.3",
+    "@deepseek-ai/dsh-tool-ask-user": "0.2.2-rc.3",
+    "@deepseek-ai/dsh-tool-bash-persistent": "0.2.2-rc.3",
+    "@deepseek-ai/dsh-tool-cordis": "0.2.2-rc.3",
+    "@deepseek-ai/dsh-tool-pwsh-persistent": "0.2.2-rc.3",
+    "@deepseek-ai/dsh-tool-schedule": "0.2.2-rc.3",
+    "@deepseek-ai/dsh-tool-str-replace-editor": "0.2.2-rc.3",
+    "@deepseek-ai/dsh-tool-workspace-dependencies": "0.2.2-rc.3",
+    "commander": "15.1.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

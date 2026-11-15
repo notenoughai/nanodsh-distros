@@ -28,4 +28,4 @@ nanodsh distro show
 }
 ```
 
-`dependencies` 承载宿主包，每个都钉死到一个版本。需要执行安装脚本的包，在 `dsh.distro.allowBuilds` 里声明。
+`dependencies` 承载官方 dsh 包在 bundle 之外提供的宿主包，外加 `@deepseek-ai/dsh-base`，每个都钉死到一个版本。包版本与它钉住的 `@deepseek-ai/dsh-base` 一致：`@nanodsh/distro-standard@0.2.2-rc.3` 就是 dsh `0.2.2-rc.3` 的标准宿主集。需要执行安装脚本的包，在 `dsh.distro.allowBuilds` 里声明。
