@@ -1,0 +1,27 @@
+{
+  "name": "@nanodsh/distro-standard",
+  "version": "0.0.1",
+  "description": "The standard host set for nanodsh instances",
+  "dsh": {
+    "distro": {
+      "api": 1,
+      "defaultBundles": [
+        "@deepseek-ai/dsh-base"
+      ],
+      "allowBuilds": [
+        "@deepseek-ai/dsh-subprocess-local",
+        "@google/genai",
+        "koffi",
+        "node-pty",
+        "protobufjs"
+      ]
+    }
+  },
+  "dependencies": {
+    "@deepseek-ai/cordis": "4.1.0",
+    "@deepseek-ai/dsh-base": "0.2.2-rc.1"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

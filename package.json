@@ -1,0 +1,16 @@
+{
+  "name": "nanodsh-distros",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "description": "Distro packages for nanodsh instances",
+  "packageManager": "pnpm@12.18.0",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "check": "node --check scripts/manifest.mjs && node --check scripts/check.mjs && node --check scripts/pack.mjs",
+    "test": "node --test",
+    "pack:check": "node scripts/pack.mjs"
+  }
+}

@@ -1,0 +1,56 @@
+name: Bug
+description: Something that used to work no longer does
+labels:
+  - kind/bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Keep it short and factual: what broke, and how to see it happen again.
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What is wrong, and who is affected.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction
+      description: The smallest steps, input or command that triggers it every time.
+      placeholder: |
+        1. ...
+        2. ...
+        3. ...
+    validations:
+      required: true
+  - type: textarea
+    id: current
+    attributes:
+      label: Current behavior
+      description: What actually happens. Include the error text as-is.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What should happen instead.
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Version, platform, configuration, or anything else needed to reproduce.
+    validations:
+      required: false
+  - type: textarea
+    id: output
+    attributes:
+      label: Relevant output
+      description: Logs or command output, pasted as-is. Do not paste secrets.
+      render: shell
+    validations:
+      required: false
