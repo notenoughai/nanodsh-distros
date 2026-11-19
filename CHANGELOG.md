@@ -6,6 +6,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [0.2.2-rc.5] - 2026-11-19
+
+### Changed
+
+- The package pins dsh `0.2.2-rc.5`, whose host set is unchanged from `0.2.2-rc.3`; only the pinned versions move.
+
 ## [0.2.2-rc.3] - 2026-11-15
 
 ### Added

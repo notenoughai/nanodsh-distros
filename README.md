@@ -28,4 +28,4 @@ A distro is a plain npm package. nanodsh reads this metadata from its manifest:
 }
 ```
 
-The `dependencies` carry the host packages the official dsh package provides outside its bundles, plus `@deepseek-ai/dsh-base`, each pinned to one version. The package version follows the `@deepseek-ai/dsh-base` version it pins, so `@nanodsh/distro-standard@0.2.2-rc.3` is the standard host set for dsh `0.2.2-rc.3`. A package that needs its install scripts to run declares them in `dsh.distro.allowBuilds`.
+The `dependencies` carry the host packages the official dsh package provides outside its bundles, plus `@deepseek-ai/dsh-base`, each pinned to one version. The package version follows the `@deepseek-ai/dsh-base` version it pins, so `@nanodsh/distro-standard@0.2.2-rc.5` is the standard host set for dsh `0.2.2-rc.5`. A package that needs its install scripts to run declares them in `dsh.distro.allowBuilds`.
