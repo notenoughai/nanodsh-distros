@@ -7,6 +7,7 @@ nanodsh 的发行版（distro）包。发行版是 dsh profile 解析依赖时�
 | 包 | 内容 |
 |---|---|
 | `@nanodsh/distro-standard` | `@deepseek-ai/dsh-base` 及其所需 peer，供官方 profile 使用 |
+| `@nanodsh/distro-full` | `@nanodsh/distro-standard` 加上 `@deepseek-ai/dsh-web-app` 与官方可选 bundle，插件页因此能列出它们 |
 
 ## 用法
 

@@ -7,6 +7,7 @@ Distro packages for nanodsh. A distro is the host a dsh profile resolves against
 | Package | Contents |
 |---|---|
 | `@nanodsh/distro-standard` | `@deepseek-ai/dsh-base` with the peers it needs, for the official profiles |
+| `@nanodsh/distro-full` | `@nanodsh/distro-standard` plus `@deepseek-ai/dsh-web-app` and the official optional bundles, so the plugin page can offer them |
 
 ## Use
 
