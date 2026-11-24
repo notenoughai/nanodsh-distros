@@ -6,11 +6,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [0.2.2-rc.5] - 2026-11-19
+
 ### Added
 
 - `@nanodsh/distro-full`, the host set that adds `@deepseek-ai/dsh-web-app` and the official optional bundles to `@nanodsh/distro-standard`, so the plugin page can offer them.
-
-## [0.2.2-rc.5] - 2026-11-19
 
 ### Changed
 
