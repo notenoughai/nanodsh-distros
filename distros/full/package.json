@@ -28,7 +28,6 @@
     "@deepseek-ai/dsh-cordis-client-runner": "0.2.2-rc.5",
     "@deepseek-ai/dsh-cua-bundle": "0.2.2-rc.5",
     "@deepseek-ai/dsh-deepseek-chat-import": "0.2.2-rc.5",
-    "@deepseek-ai/dsh-experimental-agent-team-profile": "0.2.2-rc.5",
     "@deepseek-ai/dsh-experimental-auto-review": "0.2.2-rc.5",
     "@deepseek-ai/dsh-experimental-badge-skill-bundle": "0.2.2-rc.5",
     "@deepseek-ai/dsh-experimental-cot-translation-bundle": "0.2.2-rc.5",
