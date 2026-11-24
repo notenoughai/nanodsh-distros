@@ -39,6 +39,7 @@
     "@deepseek-ai/dsh-experimental-session-search": "0.2.2-rc.5",
     "@deepseek-ai/dsh-experimental-session-titles-bundle": "0.2.2-rc.5",
     "@deepseek-ai/dsh-experimental-terminal-bundle": "0.2.2-rc.5",
+    "@deepseek-ai/dsh-experimental-tool-worktree": "0.2.2-rc.5",
     "@deepseek-ai/dsh-experimental-voice-input-bundle": "0.2.2-rc.5",
     "@deepseek-ai/dsh-mcp-client": "0.2.2-rc.5",
     "@deepseek-ai/dsh-persona": "0.2.2-rc.5",
